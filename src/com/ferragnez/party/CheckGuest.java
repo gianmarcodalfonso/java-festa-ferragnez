@@ -13,10 +13,21 @@ public class CheckGuest {
   String userName = scanner.nextLine();
   boolean isInvited = false;
 
-  for(int i = 0; i < invitedList.length; i++){
-    if(invitedList[i].toLowerCase() == userName.toLowerCase()){
+  // for(int i = 0; i < invitedList.length; i++){
+  //   if(invitedList[i].toLowerCase().equals(userName.toLowerCase())){
+  //     isInvited = true;
+  //   }
+  // }
+
+  // check con while
+
+  int i = 0;
+  while (i < invitedList.length) {
+    if(invitedList[i].equals(userName)){
       isInvited = true;
+      break;
     }
+    i++;
   }
 
   if(isInvited == true){
