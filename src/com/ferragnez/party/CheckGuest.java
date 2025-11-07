@@ -22,7 +22,7 @@ public class CheckGuest {
   // check con while
 
   int i = 0;
-  while (i < invitedList.length) {
+  while (i < invitedList.length && !isInvited){ {
     if(invitedList[i].equals(userName)){
       isInvited = true;
       break;
